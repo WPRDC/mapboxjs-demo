@@ -4,8 +4,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic3RldmVuZHNheWxvciIsImEiOiJjbDE1OG9ucjgwZXVnM
 // instantiate our map, center and zoom specify the default viewport
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-79.94, 40.4],  // pittsburgh-ish
+    style: 'mapbox://styles/stevendsaylor/ckd6iq0n702if1inv6rbbq5bg',
+    center: [-79.99, 40.44],  // pittsburgh-ish
     zoom: 11.15
 });
 
@@ -53,7 +53,8 @@ map.on('load', () => {
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-            new mapboxgl.Popup()
+            // make our new popup with the properties data for our clicked feature
+            const popup = new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(`
                         <h1 class="popup-title">${properties.name}</h1>
@@ -71,8 +72,9 @@ map.on('load', () => {
                             <span class="value">${properties.control_type}</span>
                         </div>
                         <img src="${properties.image}" class="image" alt="photo of ${properties.name}"">
-                    `)
-                .addTo(map);
+                `)
+            // add it to the map
+            popup.addTo(map);
         });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
