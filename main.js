@@ -35,7 +35,6 @@ map.on('load', () => {
     // We pass three arguments to `map.on`.
     //  1st: name of the action we want it to listen to: 'click'
     //  2nd: the id of the layer we want it to listen for 'click's on: 'water-features/circle'
-
     map.on(
         'click',
         'water-features/circle',
