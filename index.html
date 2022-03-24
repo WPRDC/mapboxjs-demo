@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Applied GIS Demo</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!--
+    This tells the browser to load the styles at the url.
+    These are provided by mapbox and are needed for our maps to look right
+    -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <!--
+    This loads the mapbox-gl.js JavaScript library from mapbox.
+    This gives us the code for the `mapbox` object that we use in our own javascript code.
+    -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+
+    <!-- This tells the browser to load our custom styles that we'll enter in "styles.css" -->
+    <link href="styles.css" rel="stylesheet"/>
+
+    <!--
+    This tells the browser load and run our js code.
+    defer tells it to wait until the html page loads
+     -->
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="titlebar">
+        <h1>Water Feature Finder</h1>
+    </div>
+
+    <!-- #map is where our map willbe placed in the document to be shown to the user in the browser-->
+    <div id="map"></div>
+</div>
+</body>
+</html>

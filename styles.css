@@ -1,0 +1,65 @@
+/*
+  styles.css
+
+  This is where you define how you want everything to look
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100vh;
+}
+
+#map {
+    flex-grow: 1;
+    border: 2px solid red;
+}
+
+/*
+this is a mapboxgl-popup class that mapbox puts on its popups.  we can write css to be styled to any
+element that has mapboxgl-popup as a class (which will be the popup our js will make)
+ */
+.mapboxgl-popup {
+    max-width: 600px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+
+/*
+    My styles
+ */
+
+.popup-title {
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}
+
+.id-field {
+    font-size: 10px;
+}
+
+.record {
+    font-size: 12px;
+}
+
+.field {
+    font-weight: 500;
+}
+
+.value {
+
+}
+
+.image {
+    padding: 12px 0 0 0;
+    max-width: 100%;
+}
