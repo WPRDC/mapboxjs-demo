@@ -1,5 +1,5 @@
-// add your own access token here
-mapboxgl.accessToken = 'YOUR-TOKEN-GOES-HERE';
+// add your own access token here, this one only works on the github page
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3RldmVuZHNheWxvciIsImEiOiJjbDE1OG9ucjgwZXVnM2pydmFzYXl6YWlyIn0.ckCSKmvQ0SL5QtktP1GFpw';
 
 // instantiate our map, center and zoom specify the default viewport
 const map = new mapboxgl.Map({
